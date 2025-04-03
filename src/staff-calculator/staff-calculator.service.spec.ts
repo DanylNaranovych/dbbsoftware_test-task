@@ -3,16 +3,6 @@ import { StaffCalculatorService, teamMember, enumMemberType } from './staff-calc
 
 jest.useFakeTimers().setSystemTime(new Date('2023-01-01'));
 
-// class TeamMemberHelper {
-//   constructor(
-//     public name: string,
-//     public hiringDay: Date,
-//     public memberType: enumMemberType,
-//     public supervisor: any,
-//     public subordinates: any[] = [],
-//   ) {}
-// }
-
 describe('StaffCalculatorService', () => {
   let service: StaffCalculatorService;
   let supervisor: any;

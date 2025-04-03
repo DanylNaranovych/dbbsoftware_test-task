@@ -35,7 +35,7 @@ export class teamMember {
         var salaryIncreasePercent = 0;
         var salaryIncreaseSubordinates = 0;
 
-        console.log(`[${this.name}] Расчет зарплаты для ${enumMemberType[this.memberType]} при ${yearsWorked} годах в команде на дату: `, asOfDate || new Date());
+        console.log(`[${this.name}] Calculation of salary for ${enumMemberType[this.memberType]} wits ${yearsWorked} years of service in the team as of the date:`, asOfDate || new Date());
 
         switch (this.memberType) {
             case enumMemberType.Employe:
@@ -69,7 +69,7 @@ export class teamMember {
             default:
                 break;
         }
-        console.log(`[${this.name}] Итоговая зарплата: ${(5000 * salaryIncreasePercent) + salaryIncreaseSubordinates}`);
+        console.log(`[${this.name}] Final Salary: ${(5000 * salaryIncreasePercent) + salaryIncreaseSubordinates}`);
         return (5000 * salaryIncreasePercent) + salaryIncreaseSubordinates;
     }
 
@@ -114,7 +114,7 @@ export class StaffCalculatorService {
             summaryTeamSalary += teamMember.calculateCurrentSalary(asOfDate);
         })
 
-        console.log(`Итоговая зарплата всей команды: ${summaryTeamSalary}`);
+        console.log(`The final salary of the entire team: ${summaryTeamSalary}`);
         return summaryTeamSalary;
     }
 
